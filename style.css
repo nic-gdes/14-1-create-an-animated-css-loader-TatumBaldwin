@@ -1,17 +1,125 @@
+
+/* Size, alignment */
 body {
     min-height: 100vh;
     min-width: 100vw;
 }
+
+.background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color:beige;
+}
+
+#contain {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+/* text */
+h1 {
+    text-align: center;
+    color: rgb(148, 107, 148);
+}
+
+/* ball */
 #loader {
-    height: 200px;
-    width: 200px;
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
     background-color: plum;
-    animation-name: rotate;
-    animation-duration: 4s;
+    animation-name: bounce;
+    animation-duration: 0.8s;
     animation-timing-function:ease-in-out;
     animation-iteration-count: infinite;
+    align-self: center;
+    z-index: 2;
+
+}
+@keyframes bounce {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate();
+    }
+    50% {
+        transform: translate(0, 130px) scaleX(1.2) scaleY(0.9);
+    }
+    75% {
+        transform: translate();
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
-@keyframes rotate {
-
+/* shadow */
+#shadow {
+    height: 100px;
+    width: 200px;
+    border-radius: 50%;
+    background-color: rgb(92, 65, 92);
+    animation-name: grow;
+    animation-duration: 0.8s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    align-self: center;
+    margin-top: 100px;
+    opacity: 40%;
+    z-index: 1;
 }
+
+@keyframes grow {
+    0% {
+        height: 20px;
+        width: 70px; 
+    }
+
+    50% {
+        height: 30px;
+        width: 170px;
+    }
+
+    100% {
+        height: 20px;
+        width: 70px; 
+    }
+}
+
+/* spinner */
+
+#spinner {
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    animation-name: spin;
+    animation-duration: 3s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+    margin: 0 auto;
+    margin-top: 50px;
+    border-bottom:rgb(148, 107, 148) solid 3px;
+    border-top: rgb(148, 107, 148) solid 3px;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+
+    50% {
+        transform: rotate(365Deg);
+    }
+
+    100% {
+        transform: rotate(0);
+    }
+}
+
+
