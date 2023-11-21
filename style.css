@@ -1,0 +1,17 @@
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+#loader {
+    height: 200px;
+    width: 200px;
+    background-color: plum;
+    animation-name: rotate;
+    animation-duration: 4s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+
+}

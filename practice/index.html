@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Still Loading...</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+        #loader {
+            height: 200px;
+            width: 200px;
+            margin: 200px;
+            background-color: plum;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-timing-function:ease-in-out;
+            animation-iteration-count: 1000;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform:rotate(0);
+            }
+
+            50% {
+                transform:rotate(365deg);
+                border-radius: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Edit only below this comment -->
+    <div id="loader"></div>
+    <!-- Edit only above this comment -->
+    
+    <header>
+        <h1>This is a webpage!</h1>
+    </header>
+
+    <main>
+        <h2>But we shouldn't be able to see it, because our loader should be loading...</h2>
+    </main>
+
+</body>
+</html>
